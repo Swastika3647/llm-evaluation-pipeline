@@ -1,17 +1,34 @@
-# 1. Initialize git in your folder
-git init
+# LLM Response Evaluation Pipeline
 
-# 2. Add all your files
-git add .
+## 🚀 Project Overview
+This project implements a real-time evaluation pipeline for checking the quality of RAG (Retrieval-Augmented Generation) responses. It automatically tests AI-generated answers against three core metrics:
+1.  **Relevance:** Does the answer address the user's specific query?
+2.  **Faithfulness (Hallucination):** Is the answer grounded strictly in the retrieved context?
+3.  **Performance:** Tracks response latency and estimated costs.
 
-# 3. Save the files
-git commit -m "Final submission for internship assignment"
+## 🛠️ Setup Instructions
 
-# 4. Rename branch to main
-git branch -M main
+### Prerequisites
+* Python 3.8+
+* A Groq API Key (Free tier used for high-performance inference)
 
-# 5. Connect to your new GitHub repo (PASTE YOUR LINK HERE)
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+### Installation
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/Swastika3647/llm-evaluation-pipeline.git](https://github.com/Swastika3647/llm-evaluation-pipeline.git)
+    cd llm-evaluation-pipeline
+    ```
 
-# 6. Push the code online
-git push -u origin main
+2.  Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  Set up your API Key:
+    * Linux/Mac: `export GROQ_API_KEY="gsk_..."`
+    * Windows: `set GROQ_API_KEY="gsk_..."`
+
+### Running the Pipeline
+Run the main evaluation script:
+```bash
+python evaluate_rag.py
